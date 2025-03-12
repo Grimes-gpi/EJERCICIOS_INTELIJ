@@ -1,0 +1,53 @@
+public class Tiempo {
+    private int hora;
+    private int minuto;
+    private int segundo;
+
+    // Constructores (hora, minuto, segundo)
+    public Tiempo(int hora) {
+        this(hora, 0, 0);
+    }
+
+    public Tiempo(int hora, int minuto) {
+        this(hora, minuto, 0);
+    }
+
+    public Tiempo(int hora, int minuto, int segundo) {
+        this.hora = hora;
+        this.minuto = minuto;
+        this.segundo = segundo;
+        validarTiempo();  //
+    }
+
+    // Comprobamos que sean correctos los valores
+    private void validarTiempo() {
+        if(hora < 0 || hora > 23) hora = 0;
+        if(minuto < 0 || minuto > 59) minuto = 0;
+        if(segundo < 0 || segundo > 59) segundo = 0;
+    }
+
+    // Modificamos la hora
+    public void setHora(int nuevaHora) {
+        if(nuevaHora >= 0 && nuevaHora <= 23) {
+            this.hora = nuevaHora;
+        }
+    }
+
+    public void setMinuto(int nuevoMinuto) {
+        if(nuevoMinuto >= 0 && nuevoMinuto <= 59) {
+            this.minuto = nuevoMinuto;
+        }
+    }
+
+    public void setSegundo(int nuevoSegundo) {
+        if(nuevoSegundo >= 0 && nuevoSegundo <= 59) {
+            this.segundo = nuevoSegundo;
+        }
+    }
+
+    // Imprimir la hora
+    @Override
+    public String toString() {
+        return String.format("%02d:%02d:%02d", hora, minuto, segundo);
+    }
+}
