@@ -1,0 +1,31 @@
+public class CuentaNum {
+        String numeroCuenta;  // Atributos visibles
+        double saldo;
+
+        // Constructor primario
+        public CuentaNum(String num, double dinero) {
+            numeroCuenta = num;
+            saldo = dinero;
+        }
+
+        // Imprimir el dinero
+        public void verSaldo() {
+            System.out.println("Saldo actual: " + saldo + "€");
+        }
+
+        // Entrega del dinero
+        public void abonar(double cantidad) {
+            saldo = saldo + cantidad;
+            System.out.println("Ha transferido: " + cantidad + "€");
+        }
+
+        // Recibo de pago
+        public void pagar(double cantidad) {
+            if(saldo >= cantidad) {
+                saldo = saldo - cantidad;
+                System.out.println("Se ha hecho un pago: " + cantidad + "€");
+            } else {
+                System.out.println("No tienes suficiente dinero");
+            }
+        }
+    }
