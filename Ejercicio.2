@@ -1,0 +1,48 @@
+public class Coche {
+        // Atributos o caracteristicas
+        private String color;
+        private String marca;
+        private String modelo;
+        private int caballos;
+        private int puertas;
+        private String matricula;
+
+        // Constructor: inicia los atributos o las caracteristicas al crear un coche
+        public Coche(String color, String marca, String modelo,
+                     int fuerza, int puertas, String matricula) {
+            this.color = color;
+            this.marca = marca;
+            this.modelo = modelo;
+            this.caballos = fuerza;
+            this.puertas = puertas;
+            this.matricula = matricula;
+        }
+
+        // Obtener los atributos del carro
+        public String getColor() {
+            return color; }
+        public String getMarca() {
+            return marca; }
+        public String getModelo() {
+            return modelo; }
+        public int getCaballos() {
+            return caballos; }
+        public int getPuertas() {
+            return puertas; }
+        public String getMatricula() {
+            return matricula; }
+
+        // Cambiar datos o caracteristicas del carro
+        public void setColor(String nuevoColor) { color = nuevoColor; }
+        public void setMatricula(String nuevaMatricula) { matricula = nuevaMatricula; }
+
+        // Imprimimos
+        public String obtenerInfo() {
+            return "Marca: " + marca +
+                    "\nModelo: " + modelo +
+                    "\nColor: " + color +
+                    "\nFuerza: " + caballos +
+                    "\nPuertas: " + puertas +
+                    "\nMatrícula: " + matricula + "\n";
+        }
+}
