@@ -1,0 +1,38 @@
+public class Rectangulo {
+        private double base;
+        private double altura;
+
+        // Este es el constructor de todo
+        public Rectangulo(double base, double altura) {
+            this.base = base;
+            this.altura = altura;
+        }
+
+        // Un metodo para calcular el area b*h
+        public double calcularArea() {
+            return base * altura;
+        }
+
+        // Para calcular el perimetro, 2 * b * h
+        public double calcularPerimetro() {
+            return 2 * (base + altura);
+        }
+
+        // Obtenemos y imprimimos los resultados
+        public double ObtenerBase() {
+            return base;
+        }
+
+        public void setBase(double base) {
+            this.base = base;
+        }
+
+        public double ObtenerAltura() {
+            return altura;
+        }
+
+        public void setAltura(double altura) {
+            this.altura = altura;
+        }
+    }
+
